@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/drawable/dialog_background.xml" value="0.2555" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/drawable/ic_baseline_check_circle_outline_24.xml" value="0.2205" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.2555" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/drawable/ic_baseline_replay_24.xml" value="0.1845" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/layout/activity_a7adith_one_level.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/layout/activity_ahadith_one_level.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/layout/activity_kids.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/layout/activity_levels.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/layout/activity_main.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/layout/activity_test.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/layout/custom_dialog.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/layout/custom_dialog_kids_7adith.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/layout/recycler_card_a7adith_kids.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/layout/recycler_card_check_7adith.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/layout/recycler_card_hadith.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/layout/recycler_card_level_7adith.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/layout/recycler_card_test.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
