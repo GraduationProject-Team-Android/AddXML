@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+<translate
+   android:duration="6000"
+    android:fromYDelta="300"
+    android:fromXDelta="0"
+    />
+
+<!--    <translate-->
+<!--       -->
+<!--        android:fromYDelta="-300"   top to bottom-->
+<!--        android:fromXDelta="0"        current position-->
+
+<!--          android:fromXDelta="300"   left to right
+                  android:toXDelta="0"
+                       from y to y : corner to corner -->
+<!--        />-->
+</set>
