@@ -6,24 +6,16 @@ public class Kids_json {
     private boolean status;
     private String errNum;
     private String msg;
-    private ArrayList<Kids_A7adith_details> childhadiths;
 
-    public ArrayList<Kids_A7adith_details> getChildhadiths() {
-        return childhadiths;
-    }
+     private ArrayList<Kids_A7adith_details> childhadiths;
+
+     public ArrayList<Kids_A7adith_details> getChildhadiths() {
+     return childhadiths;
+     }
 
     public void setChildhadiths(ArrayList<Kids_A7adith_details> childhadiths) {
-        this.childhadiths = childhadiths;
-    }
-    //  private ArrayList<String> childhadiths;
-//
-//    public ArrayList<String> getChildhadiths() {
-//        return childhadiths;
-//    }
-
-//    public void setChildhadiths(ArrayList<String> childhadiths) {
-//        this.childhadiths = childhadiths;
-//    }
+      this.childhadiths = childhadiths;
+     }
 
     public boolean isStatus() {
         return status;

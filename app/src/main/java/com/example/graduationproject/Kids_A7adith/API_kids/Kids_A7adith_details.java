@@ -11,6 +11,10 @@ public class Kids_A7adith_details {
     private String created_at;
     private String updated_at;
 
+    public Kids_A7adith_details(int id) {
+        this.id = id;
+    }
+
     public String getIamgePath() {
         return iamgePath;
     }

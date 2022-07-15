@@ -5,48 +5,63 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layoutDirection="rtl"
+    android:backgroundTint="@color/offWhite"
+    android:background="@color/offWhite"
     android:gravity="right"
     android:padding="5dp">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:backgroundTint="@color/offWhite"
+        android:elevation="20dp"
+        app:cardCornerRadius="7dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="5dp"
+            android:text="question"
+            android:textColor="@color/ment"
+            android:textDirection="rtl" />
 
-                <TextView
-                    android:id="@+id/tv_question"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingHorizontal="5dp"
-                    android:paddingVertical="5dp"
-                    android:text="question"
-                    android:textDirection="rtl" />
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="7dp"
+            android:layout_gravity="start"
+            android:layoutDirection="rtl">
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/ment"
+                android:text="option1"
+                android:textColor="@color/ment"/>
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/ment"
+                android:text="option2"
+                android:textColor="@color/ment"/>
+            <RadioButton
+                android:id="@+id/radio3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/ment"
+                android:text="option3"
+                android:textColor="@color/ment"/>
+        </RadioGroup>
 
-                <RadioGroup
-                    android:id="@+id/radio_group"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:padding="7dp"
-                    android:layout_gravity="start"
-                    android:layoutDirection="rtl">
-                    <RadioButton
-                        android:id="@+id/radio1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="option1"/>
-                    <RadioButton
-                        android:id="@+id/radio2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="option2"/>
-                    <RadioButton
-                        android:id="@+id/radio3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="option3"/>
-                </RadioGroup>
-
-
-
-
-
-
-
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
     </LinearLayout>

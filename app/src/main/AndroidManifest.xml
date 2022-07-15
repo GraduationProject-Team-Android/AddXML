@@ -13,17 +13,21 @@
         android:theme="@style/Theme.GraduationProject"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Home_ActivityR"
+            android:exported="false" />
+        <activity
             android:name=".Kids_A7adith.Kids_Activity"
             android:exported="false" />
         <activity
-            android:name=".Test.Test_Activity"
+            android:name=".Test.A7adith_levels_test.Test_Activity"
             android:exported="false" />
         <activity
-            android:name=".A7adith_levels.A7adith_one_level_Activity"
+            android:name=".Test.A7adith_levels_test.A7adith_one_level_Activity"
             android:exported="false" />
         <activity
-            android:name=".A7adith_levels.Levels_Activity"
-            android:exported="false" />
+            android:name=".Test.A7adith_levels_test.Levels_Activity"
+            android:exported="false" >
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

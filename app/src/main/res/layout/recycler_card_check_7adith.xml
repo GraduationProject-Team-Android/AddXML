@@ -1,31 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/offWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="70dp"
+        android:background="@color/offWhite"
+        android:layout_margin="1dp"
+        android:layout_marginHorizontal="1dp"
+        android:backgroundTint="@color/offWhite"
+        android:elevation="20dp"
+       app:cardCornerRadius="5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+            <CheckBox
+                android:id="@+id/checkbox_7adith"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/ment"
+                android:buttonTint="@color/ment"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/ment"/>
 
-        <CheckBox
-            android:id="@+id/checkbox_7adith"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-           />
+            <TextView
+                android:id="@+id/tv_check_7adith"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/checkbox_7adith"
+                android:gravity="right"
+                android:maxLines="3"
+                android:layout_marginHorizontal="3dp"
+                android:layout_marginTop="2dp"
+                android:paddingHorizontal="3dp"
+                android:textColor="@color/ment"
+                />
 
-        <TextView
-            android:id="@+id/tv_check_7adith"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/checkbox_7adith"
-            android:gravity="center"
-            />
+        </RelativeLayout>
 
-    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
 </RelativeLayout>

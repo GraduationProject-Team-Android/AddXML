@@ -5,21 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".A7adith_levels.A7adith_one_level_Activity">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_a7adith_one_level"
+    android:background="@color/offWhite"
+    tools:context=".Test.A7adith_levels_test.A7adith_one_level_Activity">
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_a7adith_one_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/offWhite"
+                />
 
-    <Button
-        android:id="@+id/btn_start_test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="10dp"
-        android:text="بدء الإختبار" />
+            <Button
+                android:id="@+id/btn_start_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/offWhite"
+                android:text="بدء الإختبار"
+                android:backgroundTint="@color/ment"
+                android:visibility="invisible"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </RelativeLayout>

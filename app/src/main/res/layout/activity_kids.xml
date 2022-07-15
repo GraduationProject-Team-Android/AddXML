@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFF0"
     android:orientation="vertical"
     tools:context=".Kids_A7adith.Kids_Activity">
 
@@ -11,14 +12,23 @@
     android:id="@+id/tv_title_a7adith_kids"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
     android:text="أحاديث أطفال"
     android:textStyle="bold"
-    android:textColor="@color/purple_500"
+    android:textColor="#8EC8B4"
     android:layout_gravity="center"
     android:textSize="30dp"
     />
 <androidx.recyclerview.widget.RecyclerView
     android:id="@+id/rv_kids_A7adith"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:layout_height="match_parent"
+    android:background="@color/white"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
 </LinearLayout>
