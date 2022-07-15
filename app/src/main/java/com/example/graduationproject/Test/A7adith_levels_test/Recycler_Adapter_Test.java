@@ -57,7 +57,7 @@ public class Recycler_Adapter_Test extends RecyclerView.Adapter<Recycler_Adapter
 //            holder.radio3.setClickable(false);
            // holder.rb_selected.setClickable(true);
          // Toast.makeText(context, ""+holder.checkedId, Toast.LENGTH_SHORT).show();
-         //   holder.rb_groub.check(holder.rb_groub.getChildAt(holder.checkedId).getId());
+          holder.rb_groub.check(holder.checkedId);
         }
 
 
