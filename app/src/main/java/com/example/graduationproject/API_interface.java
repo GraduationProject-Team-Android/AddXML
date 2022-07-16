@@ -2,6 +2,7 @@ package com.example.graduationproject;
 
 import com.example.graduationproject.Test.API_Test.Get_Grades_json;
 import com.example.graduationproject.Test.API_Test.Ahadith_Level_json;
+import com.example.graduationproject.Test.API_Test.Levels_Json;
 import com.example.graduationproject.Test.API_Test.Post_Grade_json;
 import com.example.graduationproject.Test.API_Test.Test_json;
 import com.example.graduationproject.Kids_A7adith.API_kids.Kids_json;
@@ -32,7 +33,8 @@ public interface API_interface {
    @POST("attachGrade/{userId}/{levelId}?")
   public Call<Post_Grade_json> postGrade(@Header("Authorization") String auth , @Path("userId") int userId , @Path("levelId") int levelId
    , @Query("grade")int grade);
-
+   @GET("levels")
+   public Call<Levels_Json>getLevels(@Header("Authorization") String auth);
 
 }
 

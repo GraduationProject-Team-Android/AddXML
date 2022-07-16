@@ -1,4 +1,4 @@
-package com.example.graduationproject.Test.A7adith_levels_test;
+package com.example.graduationproject.Test.TestActivitiesANDAdapters;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -8,16 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.graduationproject.R;
 import com.example.graduationproject.OnClickListener_A7adith_1level;
-import com.example.graduationproject.Test.API_Test.Ahadith_Level_details;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Recycler_Adapter_A7adith_1level extends RecyclerView.Adapter<Recycler_Adapter_A7adith_1level.ViewHolder_recycler> {

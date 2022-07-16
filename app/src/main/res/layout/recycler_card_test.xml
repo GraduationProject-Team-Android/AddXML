@@ -27,6 +27,7 @@
             android:paddingHorizontal="5dp"
             android:paddingVertical="5dp"
             android:text="question"
+            android:textStyle="bold"
             android:textColor="@color/ment"
             android:textDirection="rtl" />
 

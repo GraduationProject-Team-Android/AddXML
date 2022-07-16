@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/offWhite"
-    tools:context=".Test.A7adith_levels_test.Levels_Activity">
+    tools:context=".Test.TestActivitiesANDAdapters.Levels_Activity">
     <TextView
         android:id="@+id/tv_show_progg"
         android:layout_width="wrap_content"

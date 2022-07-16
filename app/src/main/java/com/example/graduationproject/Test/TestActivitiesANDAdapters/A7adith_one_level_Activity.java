@@ -1,27 +1,22 @@
-package com.example.graduationproject.Test.A7adith_levels_test;
+package com.example.graduationproject.Test.TestActivitiesANDAdapters;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.Toast;
 
 import com.example.graduationproject.API_interface;
-import com.example.graduationproject.Kids_A7adith.Kids_Activity;
 import com.example.graduationproject.R;
 import com.example.graduationproject.OnClickListener_A7adith_1level;
 import com.example.graduationproject.Test.API_Test.Ahadith_Level_json;
 
-import java.sql.Array;
 import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -65,8 +60,9 @@ public static boolean restore_checkbox ;
 
                 for(int i = 0 ; i<response.body().getLevelHadiths().size() ; i++){
              Ahadiths_id_list.add(response.body().getLevelHadiths().get(i).getId()); // may delete
-                }
-            recycler_adapter_a7adith_1level = new Recycler_Adapter_A7adith_1level(A7adith_one_level_Activity.this, A7adith_Check_list, new OnClickListener_A7adith_1level() {
+                              }
+                Log.d(""+Ahadiths_id_list, "onResponse: ");
+                recycler_adapter_a7adith_1level = new Recycler_Adapter_A7adith_1level(A7adith_one_level_Activity.this, A7adith_Check_list, new OnClickListener_A7adith_1level() {
                 @Override
                 public void onClick(int position) {  // wait rahma
 //                    Intent intent = new Intent(A7adith_one_level_Activity.this , 3rdAhadith.class);
@@ -92,6 +88,7 @@ public static boolean restore_checkbox ;
 
              if(allChecked) {
                             Intent intent = new Intent(A7adith_one_level_Activity.this, Test_Activity.class);
+                            intent.putExtra("levelId",level_num);
                             intent.putIntegerArrayListExtra("id_Ahadith_list",Ahadiths_id_list);
                              startActivity(intent);
                                }

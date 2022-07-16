@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/offWhite"
     android:backgroundTint="@color/offWhite"
-    tools:context=".Test.A7adith_levels_test.Test_Activity">
+    tools:context=".Test.TestActivitiesANDAdapters.Test_Activity">
 <androidx.core.widget.NestedScrollView
     android:layout_width="match_parent"
     android:layout_height="wrap_content">

@@ -1,4 +1,4 @@
-package com.example.graduationproject.Test.A7adith_levels_test;
+package com.example.graduationproject.Test.TestActivitiesANDAdapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,7 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.graduationproject.R;
-import com.example.graduationproject.OnClickListener_A7adith_1level;
 import com.example.graduationproject.Test.API_Test.Levels_Rating_Grade;
 import com.example.graduationproject.Test.OnClickListener_Levels;
 
@@ -22,7 +21,7 @@ public class Recycler_Adapter_Levels extends RecyclerView.Adapter<Recycler_Adapt
 ArrayList<Levels_Rating_Grade> levels_list ;
 OnClickListener_Levels onClickListener_level ;
 Context context ;
-    public Recycler_Adapter_Levels(Context context , ArrayList<Levels_Rating_Grade> levels_list, OnClickListener_Levels onClickListener_level) {
+    public  Recycler_Adapter_Levels(Context context , ArrayList<Levels_Rating_Grade> levels_list, OnClickListener_Levels onClickListener_level) {
         this.levels_list = levels_list;
         this.onClickListener_level = onClickListener_level;
         this.context = context ;

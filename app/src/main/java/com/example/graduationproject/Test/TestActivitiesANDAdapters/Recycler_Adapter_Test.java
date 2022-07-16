@@ -1,10 +1,10 @@
-package com.example.graduationproject.Test.A7adith_levels_test;
+package com.example.graduationproject.Test.TestActivitiesANDAdapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -17,15 +17,16 @@ import com.example.graduationproject.Test.API_Test.Ahadiths_Questions_details;
 import com.example.graduationproject.R;
 import com.example.graduationproject.OnClickListener_Radio_Buttons;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Recycler_Adapter_Test extends RecyclerView.Adapter<Recycler_Adapter_Test.ViewHolder_recycler> {
     List<Ahadiths_Questions_details> test_list ;
+    HashMap<Integer,Integer>map=new HashMap<>();
    Context context ;
    int positionCard ;
    static OnClickListener_Radio_Buttons listener_radio_buttons;
-
+   int selected_id_h;
     public Recycler_Adapter_Test(Context context ,List<Ahadiths_Questions_details> test_list, OnClickListener_Radio_Buttons listener_radio_buttons) {
         this.test_list = test_list;
         this.listener_radio_buttons = listener_radio_buttons ;
@@ -40,25 +41,54 @@ public class Recycler_Adapter_Test extends RecyclerView.Adapter<Recycler_Adapter
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Recycler_Adapter_Test.ViewHolder_recycler holder, int position) {
+    public void onBindViewHolder(@NonNull Recycler_Adapter_Test.ViewHolder_recycler holder, @SuppressLint("RecyclerView") int position) {
         Ahadiths_Questions_details test_details = test_list.get(position);
         holder.question.setText((position+1)+"- "+test_details.getQuestion());
         holder.radio1.setText(test_details.getChoiceA());
         holder.radio2.setText(test_details.getChoiceB());
         holder.radio3.setText(test_details.getChoiceC());
+
         positionCard = holder.getAdapterPosition();
-        if(Test_Activity.finish_test==true) {
-//            for (int i = 0; i < holder.rb_groub.getChildCount(); i++) {
-//                holder.rb_groub.getChildAt(i).setClickable(false);
-//            }   ho
-        listener_radio_buttons.showSolutions(holder.radio1,holder.radio2, holder.radio3);
-//            holder.radio2.setClickable(false);
-//            holder.radio1.setClickable(false);
-//            holder.radio3.setClickable(false);
-           // holder.rb_selected.setClickable(true);
-         // Toast.makeText(context, ""+holder.checkedId, Toast.LENGTH_SHORT).show();
-          holder.rb_groub.check(holder.checkedId);
+//     int selectedId=1;
+//       // Toast.makeText(context, "", Toast.LENGTH_SHORT).show();
+//      if(holder.radio1.isChecked()){
+//          selectedId=holder.radio1.getId();
+//      }
+//      else if(holder.radio2.isChecked()) {
+//          selectedId=holder.radio2.getId();
+//      }
+//      else if(holder.radio3.isChecked()) {
+//          selectedId=holder.radio3.getId();
+//      }
+
+        holder. rb_groub.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                //checkedId=i;
+                // Toast.makeText(context, ""+checkedId, Toast.LENGTH_SHORT).show();
+
+                holder.rb_selected = holder.itemView.findViewById(holder.rb_groub.getCheckedRadioButtonId());
+                holder.index_answer = holder.rb_groub.indexOfChild(holder.rb_selected);
+                map.put(position,holder.rb_selected.getId());
+                // Toast.makeText(context, "hhhh"+map.size(), Toast.LENGTH_SHORT).show();
+                listener_radio_buttons.options(holder.rb_groub, holder.radio1, holder.radio2, holder.radio3, holder.getAdapterPosition(), holder.index_answer);
+            }});
+
+        if(Test_Activity.show_solutions==true){
+            //Toast.makeText(context, "rec"+Test_Activity.show_solutions, Toast.LENGTH_SHORT).show();
+            listener_radio_buttons.showSolutions(holder.radio1,holder.radio2,holder.radio3,holder.getAdapterPosition());
         }
+        if(Test_Activity.finish_test==true) {
+            if(Test_Activity.show_solutions==true){
+             //   Toast.makeText(context, "recif"+Test_Activity.show_solutions, Toast.LENGTH_SHORT).show();
+                listener_radio_buttons.showSolutions(holder.radio1,holder.radio2,holder.radio3,holder.getAdapterPosition());
+            }
+           holder.radio2.setClickable(false);
+            holder.radio1.setClickable(false);
+            holder.radio3.setClickable(false);
+            holder.rb_groub.check(map.get(position));// holder.rb_selected.setClickable(true);
+        }
+//        holder.rb_groub.check(holder.rb_selected.getId());
 
 
 //        holder.radio1.setChecked(position == selectedPosition );
@@ -106,13 +136,13 @@ public class Recycler_Adapter_Test extends RecyclerView.Adapter<Recycler_Adapter
         return test_list.size();
     }
 
-    public static class ViewHolder_recycler extends RecyclerView.ViewHolder{
+    public  class ViewHolder_recycler extends RecyclerView.ViewHolder{
     TextView question;
-   public static RadioGroup rb_groub;
+   public RadioGroup rb_groub;
     RadioButton radio1;
     RadioButton radio2;
     RadioButton radio3;
-      public static   RadioButton rb_selected;
+    RadioButton rb_selected;
         int index_answer;
         int checkedId;
 
@@ -124,42 +154,9 @@ public class Recycler_Adapter_Test extends RecyclerView.Adapter<Recycler_Adapter
             radio1     =itemView.findViewById(R.id.radio1);
             radio2     =itemView.findViewById(R.id.radio2);
             radio3     =itemView.findViewById(R.id.radio3);
- rb_groub.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-    @Override
-    public void onCheckedChanged(RadioGroup radioGroup, int i) {
-        checkedId=i;
-       // Toast.makeText(context, ""+checkedId, Toast.LENGTH_SHORT).show();
-   rb_selected = itemView.findViewById(rb_groub.getCheckedRadioButtonId());
-
-      //  Toast.makeText(context, "hhhh"+rb_selected.getId(), Toast.LENGTH_SHORT).show();
-
-
-         index_answer = rb_groub.indexOfChild(rb_selected);
-        listener_radio_buttons.options(rb_groub,radio1,radio2,radio3,getAdapterPosition(),index_answer);
-    }});
 
 
 
- if(Test_Activity.show_answers){
-    // Toast.makeText(context, "recycler", Toast.LENGTH_SHORT).show();
-     listener_radio_buttons.showSolutions(radio1,radio2,radio3);          // we need for loop to show solutions .
-   }
-// else   Toast.makeText(context, "recyclerFalse"+Test_Activity.count, Toast.LENGTH_SHORT).show();
-
-        //    if(Test_Activity.moveTo.isEnabled())  listener_radio_buttons.showSolutions(radio1,radio2,radio3);
-
-//   Test_Activity.btn_finish_test.setOnClickListener(new View.OnClickListener() {
-//       @Override
-//       public void onClick(View view) {
-//
-//       }
-//   });
-
-
-///rb_groub.setOnClickListener(new View.OnClickListener() {
-//    @Override
-//    public void onClick(View view) {
-//
         }
     }
 

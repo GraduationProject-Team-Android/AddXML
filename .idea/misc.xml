@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/drawable/circle_rb_correct.xml" value="0.168" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/drawable/circle_rb_incorrect.xml" value="0.168" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/drawable/dialog_background.xml" value="0.2555" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/drawable/ic_baseline_check_circle_outline_24.xml" value="0.2205" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/Graduation_Project/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.2" />
